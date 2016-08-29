@@ -1,6 +1,6 @@
 <?php
 
-namespace CometCult\BraintreeBundle\DependencyInjection;
+namespace nacholibre\BraintreeBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -13,7 +13,7 @@ use Braintree_Configuration;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class CometCultBraintreeExtension extends Extension
+class nacholibreBraintreeExtension extends Extension
 {
     /**
      * {@inheritDoc}

@@ -1,6 +1,6 @@
 <?php
 
-namespace CometCult\BraintreeBundle\Exception;
+namespace nacholibre\BraintreeBundle\Exception;
 
 use Exception;
 

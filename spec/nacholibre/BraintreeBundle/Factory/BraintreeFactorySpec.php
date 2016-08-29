@@ -1,11 +1,11 @@
 <?php
 
-namespace spec\CometCult\BraintreeBundle\Factory;
+namespace spec\nacholibre\BraintreeBundle\Factory;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-use CometCult\BraintreeBundle\Exception\InvalidServiceException;
+use nacholibre\BraintreeBundle\Exception\InvalidServiceException;
 
 class BraintreeFactorySpec extends ObjectBehavior
 {
@@ -16,7 +16,7 @@ class BraintreeFactorySpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('CometCult\BraintreeBundle\Factory\BraintreeFactory');
+        $this->shouldHaveType('nacholibre\BraintreeBundle\Factory\BraintreeFactory');
     }
 
     function it_should_get_available_service()

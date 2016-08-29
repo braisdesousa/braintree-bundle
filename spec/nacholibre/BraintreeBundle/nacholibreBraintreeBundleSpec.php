@@ -1,15 +1,15 @@
 <?php
 
-namespace spec\CometCult\BraintreeBundle;
+namespace spec\nacholibre\BraintreeBundle;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-class CometCultBraintreeBundleSpec extends ObjectBehavior
+class nacholibreBraintreeBundleSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('CometCult\BraintreeBundle\CometCultBraintreeBundle');
+        $this->shouldHaveType('nacholibre\BraintreeBundle\nacholibreBraintreeBundle');
     }
 
     function it_should_be_a_bundle()

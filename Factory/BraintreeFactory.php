@@ -1,8 +1,8 @@
 <?php
 
-namespace CometCult\BraintreeBundle\Factory;
+namespace nacholibre\BraintreeBundle\Factory;
 
-use CometCult\BraintreeBundle\Exception\InvalidServiceException;
+use nacholibre\BraintreeBundle\Exception\InvalidServiceException;
 use Braintree_Configuration;
 
 /**

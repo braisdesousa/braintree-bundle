@@ -1,7 +1,5 @@
-CometCultBraintreeBundle
+Symfony2 Braintree Bundle
 ========================
-[![Build Status](https://secure.travis-ci.org/cometcult/CometCultBraintreeBundle.png)](http://travis-ci.org/cometcult/CometCultBraintreeBundle)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/cometcult/CometCultBraintreeBundle/badges/quality-score.png?s=1972a8eb4257406f4e43a9b944dac03f17a0126d)](https://scrutinizer-ci.com/g/cometcult/CometCultBraintreeBundle/)
 
 Symfony 2 Bundle for Braintree's PHP client library
 
@@ -10,15 +8,9 @@ Installation
 
 ### Composer ###
 
-Just add to your composer.json file:
+Install
 
-```json
-{
-    "require": {
-        "cometcult/braintree-bundle": "dev-master"
-    }
-}
-```
+`composer require nacholibre/braintree-bundle`
 
 ### Application Kernel ###
 
@@ -30,7 +22,7 @@ public function registerBundles()
 {
     return array(
         // ...
-        new CometCult\BraintreeBundle\CometCultBraintreeBundle(),
+        new nacholibre\BraintreeBundle\nacholibreBraintreeBundle(),
         // ...
     );
 }
@@ -43,11 +35,11 @@ Configuration
 ```yml
 # app/config/config.yml
 # ...
-comet_cult_braintree:
-  environment: sandbox
-  merchant_id: your_merchant_id
-  public_key: your_public_key
-  private_key: your_private_key
+nacholibre_braintree:
+    environment: sandbox
+    merchant_id: your_merchant_id
+    public_key: your_public_key
+    private_key: your_private_key
 ```
 
 For more info about the configuration variables see [Braintree docs](https://www.braintreepayments.com/docs/php/guide/getting_paid#configuration)
@@ -65,7 +57,7 @@ One of the methods for getting a desired service is to call the `get` method fro
 
 ```php
 // in your controller
-$factory = $this->get('comet_cult_braintree.factory');
+$factory = $this->get('braintree.factory');
 $customerService = $factory->get('customer');
 ```
 
@@ -78,7 +70,7 @@ Instead of calling the factory you can define a custom service in your own bundl
 services:
     customer_custom_service:
         class:            Braintree_Customer
-        factory_service:  comet_cult_braintree.factory
+        factory_service:  braintree.factory
         factory_method:   get
         arguments: ["customer"]
 ```

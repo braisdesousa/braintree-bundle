@@ -1,6 +1,6 @@
 <?php
 
-namespace CometCult\BraintreeBundle\DependencyInjection;
+namespace nacholibre\BraintreeBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('comet_cult_braintree');
+        $rootNode = $treeBuilder->root('nacholibre_braintree');
 
         $rootNode
             ->children()
