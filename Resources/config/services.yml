@@ -1,0 +1,13 @@
+parameters:
+    comet_cult_braintree.factory.class: nacholibre\BraintreeBundle\Factory\BraintreeFactory
+
+services:
+    braintree.factory:
+        class:  "%comet_cult_braintree.factory.class%"
+        arguments: ["%comet_cult_braintree.environment%", "%comet_cult_braintree.merchant_id%", "%comet_cult_braintree.public_key%", "%comet_cult_braintree.private_key%"]
+
+    nacholibre.braintree.drop_in_type.form:
+        class: nacholibre\BraintreeBundle\Form\Type\BraintreeDropInType
+        arguments: ["@service_container"]
+        tags:
+            - { name: form.type }
