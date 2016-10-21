@@ -28,7 +28,7 @@ class BraintreeDropInType extends AbstractType {
             //'entity_class' => null,
             //'size' => 'md',
             //'required' => false,
-            //'error_bubbling' => false,
+            'error_bubbling' => false,
         ];
     }
 
