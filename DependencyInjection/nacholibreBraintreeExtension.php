@@ -60,7 +60,7 @@ class nacholibreBraintreeExtension extends Extension implements PrependExtension
                 case 'twig':
                     $container->prependExtensionConfig(
                         $name,
-                        array('form_themes' => array('resources' => array($this->formTypeTemplate)))
+                        array('form_themes' => array($this->formTypeTemplate))
                     );
                     break;
             }
